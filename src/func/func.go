@@ -58,6 +58,19 @@ func test5(args ...interface{}) {
 		}
 	}
 }
+
+func test6(num int) {
+	// go 中不支持三元表达式
+	//max := num >10 ? num : 10
+	var max int
+	if num > 10 {
+		max = num
+	} else {
+		max = 100
+	}
+	fmt.Println(max)
+}
+
 func main() {
 	fmt.Println(test(1, 2))
 	fmt.Println(test2(1, 2, 3, 4, 5, 6, 7))
